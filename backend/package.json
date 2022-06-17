@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/dianKoliva/nodeBeforeExam#readme",
     "dependencies": {
+        "mongoose": "^6.3.8",
         "nodemon": "^2.0.16"
     }
 }
