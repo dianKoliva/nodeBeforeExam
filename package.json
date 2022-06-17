@@ -1,0 +1,24 @@
+{
+    "name": "nodebeforeexam",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dianKoliva/nodeBeforeExam.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dianKoliva/nodeBeforeExam/issues"
+    },
+    "homepage": "https://github.com/dianKoliva/nodeBeforeExam#readme",
+    "dependencies": {
+        "nodemon": "^2.0.16"
+    }
+}
