@@ -1,19 +1,21 @@
-const express = require("express")
+const express = require('express');
 const app = express();
-const port = 400;
-const student = require("./controllers/StudentControll")
+const port = 4355;
+const student = require("./cotrollers/StudentCont");
+const bodyParser = require("body-parser");
 
+// requires
+require("./db/db")
 
-//requires
-// require("./db/db")
+//use
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use("/stud", student);
 
-//using
-app.use("/student", student)
-
-app.get("/get", (req, res) => {
-    console.log("hello");
+app.get("/", () => {
+    console.log("hello")
 })
-app.listen(() => {
 
-    console.log(`App running on port ${port}`);
+app.listen(port, () => {
+    console.log(`running on port ${port}`);
 })

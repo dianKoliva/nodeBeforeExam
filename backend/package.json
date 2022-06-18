@@ -1,5 +1,5 @@
 {
-    "name": "nodebeforeexam",
+    "name": "backend",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,18 +7,12 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon index.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dianKoliva/nodeBeforeExam.git"
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/dianKoliva/nodeBeforeExam/issues"
-    },
-    "homepage": "https://github.com/dianKoliva/nodeBeforeExam#readme",
     "dependencies": {
+        "body-parser": "^1.20.0",
+        "express": "^4.18.1",
         "mongoose": "^6.3.8",
         "nodemon": "^2.0.16"
     }
