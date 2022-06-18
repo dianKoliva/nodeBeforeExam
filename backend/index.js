@@ -3,7 +3,7 @@ const app = express();
 const port = 4355;
 const student = require("./cotrollers/StudentCont");
 const bodyParser = require("body-parser");
-
+const user = require("./cotrollers/UserController");
 // requires
 require("./db/db")
 
@@ -11,6 +11,7 @@ require("./db/db")
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/stud", student);
+app.use("/user", user);
 
 app.get("/", () => {
     console.log("hello")

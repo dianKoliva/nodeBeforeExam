@@ -1,17 +1,18 @@
 const express = require("express");
 const Student = require("../models/Student");
 const router = express.Router();
+const checker = require("../checker")
 
-router.get("/", (req, res) => {
-
+router.get("/", checker, (req, res) => {
+    console.log("in here");
     Student.find().then((result) => {
-        result.json({
+        res.json({
             data: result
         })
 
     }).catch((err) => {
-
-        res.status(400).json({ error: err });
+        console.log(err);
+        res.status(400).json({ myerro: err });
 
 
     })
@@ -48,5 +49,7 @@ router.post("/", (req, res) => {
 
 
 })
+
+
 
 module.exports = router;
