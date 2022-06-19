@@ -3,7 +3,21 @@ const Student = require("../models/Student");
 const router = express.Router();
 const checker = require("../checker")
 
-router.get("/", checker, (req, res) => {
+/**
+ * @swagger
+ * tags:
+ *  name:MainData
+ *  description:This is for the main data
+ * /stud/getAll:
+ *  get:
+ *     tags[MainData]
+ *     parameters:
+ *      -name:"student name"
+ *       default:1
+ *   
+ */
+
+router.get("/getAll", checker, (req, res) => {
     console.log("in here");
     Student.find().then((result) => {
         res.json({
