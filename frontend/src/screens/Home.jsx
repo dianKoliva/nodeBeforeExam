@@ -26,7 +26,7 @@ function Home(){
         </div>
         <div className="col">
             
-<img src={study} className="img-fluid mt-4 ms-auto " alt="" />
+<img src={study} className="img-fluid mt-4 ms-4 " alt="" />
         </div>
 
     </div>
