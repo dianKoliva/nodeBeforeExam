@@ -9,4 +9,15 @@ services:
     build: ./backend
     port:
       -"4355"
-      
+    
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: king
+    volumes:
+      -db-data: /mongo
+
+volumes:
+   -db-data:
