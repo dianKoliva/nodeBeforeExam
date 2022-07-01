@@ -10,6 +10,8 @@ const checker = require("../checker")
  * /stud/get-all:
  *   get:
  *     summary: Retrieve a list of JSONPlaceholder users.
+ *     tags:
+ *       - student
  *     responses:
  *       200:
  *         description: A list of users.
@@ -59,6 +61,8 @@ router.get("/get-all", (req, res) => {
  * /stud/get/{id}:
  *   get:
  *     summary: Retrieve a list of JSONPlaceholder users.
+ *     tags:
+ *       - student
  *     description: Retrieve a list of users from JSONPlaceholder. Can be used to populate a list of fake users when prototyping or testing an API.
  *     parameters:
  *        - in: path
@@ -122,6 +126,8 @@ router.get("/get/:id", (req, res) => {
  * /stud/:
  *   post:
  *     summary: Create new student.
+ *     tags:
+ *       - student
  *     requestBody:
  *       required: true
  *       content:
@@ -207,6 +213,8 @@ router.post("/", (req, res) => {
  * /stud/update/{id}:
  *   put:
  *     summary: update student.
+ *     tags:
+ *       - student
  *     parameters:
  *        - in: path
  *          name: id
@@ -295,6 +303,8 @@ router.put("/update/:id", (req, res) => {
  * /stud/delete/{id}:
  *   delete:
  *     summary: delete a  student by id.
+ *     tags:
+ *       - student
  *     parameters:
  *        - in: path
  *          name: id

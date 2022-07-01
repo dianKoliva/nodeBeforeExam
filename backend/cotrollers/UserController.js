@@ -5,6 +5,64 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs");
 
+/**
+ * @swagger
+ * /user/register:
+ *   post:
+ *     summary: Create new user.
+ *     tags:
+ *       - user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: The user's name.
+ *                 example: Leanne Graham
+ *               email:
+ *                  type: string
+ *                  description: The user's email.
+ *                  example: example@gmail.com
+ *               password:
+ *                  type: string
+ *                  description: User password.
+ *                  example: password
+ * 
+ *     responses:
+ *       201:
+ *         description: Created
+ *       400:
+ *         description: Bad Requests
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                    
+ *                     name:
+ *                       type: string
+ *                       description: The user's name.
+ *                       example: Leanne Graham
+ *                     
+ *                     email:
+ *                       type: string
+ *                       description: The user's email.
+ *                       example: example@gmail.com
+ * 
+ *                     password:
+ *                      type: string
+ *                      description: The user's age.
+ *                      example: password
+ */
+
+
 router.post("/register", (req, res) => {
 
     User.find({ email: req.body.email })
@@ -31,6 +89,56 @@ router.post("/register", (req, res) => {
             }
         })
 })
+
+
+/**
+ * @swagger
+ * /user/login:
+ *   post:
+ *     summary: Login.
+ *     tags:
+ *       - user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                  type: string
+ *                  description: The user's email.
+ *                  example: example@gmail.com
+ *               password:
+ *                  type: string
+ *                  description: User password.
+ *                  example: password
+ * 
+ *     responses:
+ *       200:
+ *         description: OK
+ *       400:
+ *         description: Bad Requests
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                    
+ *                     
+ *                     email:
+ *                       type: string
+ *                       description: The user's email.
+ *                       example: example@gmail.com
+ * 
+ *                     password:
+ *                      type: string
+ *                      description: The user's age.
+ *                      example: password
+ */
 
 router.post("/login", (req, res) => {
     const pass = req.body.password;
