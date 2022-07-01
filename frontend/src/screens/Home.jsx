@@ -9,7 +9,7 @@ function Home(){
 <Nav></Nav>
 <div className="container">
     <div className="row gy-4 gx-4 homeb">
-        <div className=" col my-4  pt-4">
+        <div className=" col-xl-6 order-sm-2 order-xl-1  my-4  pt-4">
             <h1>Become a KS member</h1>
             <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit cupiditate quod, ratione animi, voluptatum maiores nulla molestias voluptatibus repellendus laborum blanditiis nostrum quae itaque vero assumenda recusandae repudiandae natus totam expedita mollitia incidunt quia eos voluptates. Quisquam quo, iste nihil delectus illo commodi veniam vitae quis explicabo dolor sed eum qui consequatur, repudiandae similique itaque optio quas quasi illum nisi error dolore perferendis libero labore. Enim architecto soluta totam! Exercitationem quas quo earum sequi odio laborum unde quasi nostrum totam. Earum, quisquam? Nesciunt autem asperiores ea pariatur consequuntur deserunt incidunt laudantium corporis sunt odit nulla, quisquam, assumenda molestiae quis omnis?
@@ -24,7 +24,7 @@ function Home(){
 </div>
 
         </div>
-        <div className="col">
+        <div className="col-xl-6 order-sm-1 order-xl-2 ">
             
 <img src={study} className="img-fluid mt-4 ms-4 " alt="" />
         </div>
