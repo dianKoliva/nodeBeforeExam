@@ -153,9 +153,9 @@ router.post("/login", (req, res) => {
                     const token = jwt.sign({ name: user.name, email: user.email },
                         "trial", { expiresIn: "6h" });
 
-                    res.status(200).json({ token: token });
+                    res.status(200).json({ token: token, message: "valid" });
                 } else {
-                    res.status(400).json("invalid user");
+                    res.status(400).json({ message: "invalid" });
                 }
             }
         })

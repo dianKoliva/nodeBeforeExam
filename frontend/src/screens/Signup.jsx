@@ -23,7 +23,7 @@ const Signup = () => {
 
 <div class="col ">
 
-<h2 className='lead'>Sig Up to continue</h2>
+<h2 class='lead'>Sig Up to continue</h2>
 
 
 <div>
@@ -60,7 +60,7 @@ const Signup = () => {
                     <div class="">
                     <button type="button" class="btn enW btn-primary">Register</button>
                     </div>
-<div className="d-flex flex-row justify-content-between py-4">
+<div class="d-flex flex-row justify-content-between py-4">
 
 <div class="p-2">
     <a href="">Forgot password?</a>

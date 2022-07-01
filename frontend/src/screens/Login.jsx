@@ -1,14 +1,37 @@
 import React from 'react'
 import { Nav } from '../components/Nav'
-import log from "../images/log.png"
-import { Link } from 'react-router-dom'
+import img from "../images/log.png"
+import { Link} from 'react-router-dom'
 import "../App.css"
 import { useState } from 'react'
+import { useNavigate} from 'react-router'
+import axios from 'axios'
+
 
 const Login = () => {
+  const base = "http://localhost:4355"
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setpassword]=useState("");
+    const navigate=useNavigate();
+
+    function log(){
+      let data = {
+        email: email,
+        password: password
+    }
+
+    axios.post(`${base}/user/login`, data).then(res => {
+           
+if(res.data.message="valid"){
+  navigate("/")
+
+}
+        })
+        .catch(err => {
+            return err;
+        })
+    }
   return (
     <div>
     <Nav></Nav>
@@ -17,25 +40,16 @@ const Login = () => {
       <div class="row loginb gx-4">
 
 <div class='col '>
-<img src={log} class="img-fluid" alt="" />
+<img src={img} class="img-fluid" alt="" />
 </div>
 
 <div class="col ">
 
-<h2 className='lead'>Login to continue</h2>
+<h2 class='lead'>Login to continue</h2>
 
 
 <div>
-<form action="">
-                        <div class="mb-3">
-                            <label for="first-name" class="col-form-label">
-                           Firstname
-                        </label>
-
-                            <input onChange={(e)=>setName(e.target.value)} value={name} type="text" class="form-control" id="first-name"/>
-
-                        </div>
-                      
+<form action="">            
                         <div class="mb-3">
                             <label for="last-name" class="col-form-label">
                            Email
@@ -57,9 +71,9 @@ const Login = () => {
                     </form>
 
                     <div class="">
-                    <button type="button" onClick={(e)=>{e.preventDefault();}} class="btn enW btn-primary">Register</button>
+                    <button type="button" onClick={(e)=>{e.preventDefault();log()}} class="btn enW btn-primary">Login</button>
                     </div>
-<div className="d-flex flex-row justify-content-between py-4">
+<div class="d-flex flex-row justify-content-between py-4">
 
 <div class="p-2">
     <a href="">Forgot password?</a>
