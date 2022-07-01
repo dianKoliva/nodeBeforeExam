@@ -22,7 +22,7 @@ export const Nav = () => {
               
                 <a href="#" class="nav-item me-4 text-light nav-link">Profile</a>
                 <a href="#" class="nav-item me-4 text-light nav-link">Messages</a>
-                <a href="#" class="nav-item me-4 text-light nav-link" tabindex="-1">Reports</a>
+                <a href="#" class="nav-item me-4 text-light nav-link" tabIndex="-1">Reports</a>
             </div>
            
             <div class="navbar-nav me-4">
