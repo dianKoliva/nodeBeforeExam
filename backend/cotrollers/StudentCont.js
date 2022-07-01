@@ -290,7 +290,24 @@ router.put("/update/:id", (req, res) => {
 
 
 
-
+/**
+ * @swagger
+ * /stud/delete/{id}:
+ *   delete:
+ *     summary: delete a  student by id.
+ *     parameters:
+ *        - in: path
+ *          name: id
+ *          required: true
+ *          schema:
+ *               type: string
+ *     responses:
+ *       201:
+ *         description: Created
+ *       400: 
+ *         description: Bad request
+ *       
+ */
 router.delete("/delete/:id", (req, res) => {
 
     Student.findById(req.params.id)
