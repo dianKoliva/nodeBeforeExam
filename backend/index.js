@@ -31,7 +31,6 @@ const swaggerSpec = swaggerJSDoc(options);
 
 
 
-
 //use
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
