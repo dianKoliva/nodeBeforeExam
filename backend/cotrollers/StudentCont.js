@@ -40,7 +40,7 @@ const checker = require("../checker")
  */
 
 
-router.get("/get-all", (req, res) => {
+router.get("/get-all", checker, (req, res) => {
     Student.find().then((result) => {
         res.json({
             data: result
