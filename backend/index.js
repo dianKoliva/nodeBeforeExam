@@ -17,7 +17,20 @@ const swaggerDefinition = {
     info: {
         tittle: "My apis",
         version: "1.0.0"
-    }
+    },
+    components: {
+        securitySchemes: {
+            bearerAuth: {
+                type: 'http',
+                scheme: 'bearer',
+                in: 'header',
+                bearerFormat: 'JWT',
+            }
+        }
+    },
+    security: [{
+        bearerAuth: []
+    }]
 };
 
 const options = {
