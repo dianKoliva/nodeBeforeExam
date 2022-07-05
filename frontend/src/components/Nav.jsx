@@ -6,10 +6,10 @@ export const Nav = () => {
   return (
     <div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light b-ack">
     <div class="container-fluid">
         <a href="#" class="navbar-brand">
-<h3 className='text-primary'>Koliva's School</h3>
+<h3 class='text-primary'>Koliva's School</h3>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
